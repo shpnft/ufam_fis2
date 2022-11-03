@@ -1,4 +1,4 @@
-\begin{frame}
+\begin{frame}%{Capa}
     \titlepage
 \end{frame}
 
@@ -13,8 +13,8 @@
 \begin{frame}{Ementa}
     \begin{itemize}
         \item Equilíbrio Estático (somente Química Industrial)
-        \item Fluidos 
-        \item Oscilações 
+        \item Fluidos
+        \item Oscilações
         \item Ondas em meio material
         \item Ondas sonoras
         \item Temperatura e calor
@@ -51,7 +51,7 @@
 
 \begin{frame}{Força e torque}
     \begin{itemize}
-        \item Forças causam variação no movimento \textbf{translacional} 
+        \item Forças causam variação no movimento \textbf{translacional}
         \item Torques causam variação no movimento \textbf{rotacional}
     \end{itemize}
     \begin{center}
@@ -63,7 +63,7 @@
 
 \begin{frame}{Equilíbrio estático}
     \begin{itemize}[<+->]
-        \item A força externa resultante que atua sobre o corpo deve ser nula: 
+        \item A força externa resultante que atua sobre o corpo deve ser nula:
             \[
                 \sum \vec{F}=\vec{0} \implies
                 \begin{cases}
@@ -71,7 +71,7 @@
                 \end{cases}
             \]
 
-        \item O torque externo resultante deve ser nulo: 
+        \item O torque externo resultante deve ser nulo:
             \[
                 \sum \vec{\tau}=\vec{0} \implies
                 \begin{cases}
@@ -87,8 +87,8 @@
     \begin{center}
         \includegraphics[width=0.5\textwidth]{images/thor}
     \end{center}
-    Na figura acima, se a cabeça do martelo pesa \SI{8}{kg} e o cabo pesa \SI{2.5}{kg}, a que distância da extremidade 
-    esquerda do martelo devemos amarrar um fio para que ele fique na horizontal quando pendurado? Considere tanto 
+    Na figura acima, se a cabeça do martelo pesa \SI{8}{kg} e o cabo pesa \SI{2.5}{kg}, a que distância da extremidade
+    esquerda do martelo devemos amarrar um fio para que ele fique na horizontal quando pendurado? Considere tanto
     a cabeça quanto o cabo do martelo \textbf{uniformes}
 
     \pause
@@ -97,4 +97,157 @@
         \item Data de entrega: 20/10
         \item Vale 1 ponto extra na \(N_1\) (nota máxima 10)
     \end{itemize}
+\end{frame}
+
+\begin{frame}{Centro de massa}
+    \begin{itemize}
+        \item O centro de massa de um sistema de partículas é o ponto que se move como se (1) toda a massa do sistema estivesse
+            concentrada nesse ponto e (2) todas as forças externas estivessem aplicadas nesse ponto
+        \item Se o sistema de partículas é \textit{discreto}, temos
+            \[
+                \vec{r}_{CM} = \frac{1}{M} \sum_{i=1}^{N} m_i \vec{r}_i
+            \]
+        \item Se o sistema de partículas é \textit{contínuo}, temos
+            \[
+                \vec{r}_{CM} = \frac{1}{M} \int \vec{r}\; dm
+            \]
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[c]{Centro de gravidade}
+    \begin{itemize}
+        \item A força gravitacional \( \vec{F}_g\) age \textit{efetivamente} sobre um único ponto de um corpo, o chamado \textbf{centro de
+        gravidade} (CG) do corpo
+    \item Se \( \vec{g}\) é igual para todos os elementos de um corpo, o centro de gravidade (CG) do corpo coincide com o centro
+        de massa (CM)
+
+    \item O torque devido a \(\vec{F}_g\) pode ser calculado como se \(\vec{F_g}\) estivesse aplicada \textit{somente} no centro de gravidade
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Exemplo 1}
+    Uma esfera homogênea de massa \( m = \SI{0.85}{kg} \) e raio \(r = \SI{4.2}{cm}\) é mantida em repouso
+    por uma corda, de massa desprezível, presa a uma parede sem atrito a uma distância \(L = \SI{8.0}{cm}\) acima do
+    centro da esfera. Determine (a) a tração da corda e (b) a força que a parede exerce sobre a esfera.
+    \begin{center}
+        \includegraphics[width=0.2\textwidth]{images/bolapendurada}
+    \end{center}
+\end{frame}
+
+\begin{frame}{Torque}
+    \begin{itemize}
+        \item Temos que
+            \begin{align*}
+                \vec{\tau} &= \vec{r} \times \vec{F} \\
+                \tau &= r F \sen{\theta}
+            \end{align*}
+            onde \(\theta\) é o menor ângulo entre os vetores \(\vec{r}\) e \(\vec{F}\)
+        \item Quando as forças e posições estão no \textbf{mesmo plano},
+            a direção de \(\vec{\tau}\) é sempre perpendicular ao plano (''folha de papel''), mas o sentido depende da
+            rotação que resultaria da ação do torque
+            \begin{columns}
+                \begin{column}{0.4\textwidth}
+                    \begin{figure}
+                        \begin{tikzpicture}[scale=0.5]
+                            \draw [blue, thick, ->] (2,0) -- (4,2) node [right] { \(\vec{F}\) };
+                            \draw [red, thick, ->] (0,0) -- (2,0) node [right] { \(\vec{r}\) };
+                        \end{tikzpicture}
+                        \caption{sentido positivo, saindo na folha de papel}
+                    \end{figure}
+                \end{column}
+
+                \begin{column}{0.4\textwidth}
+                    \begin{figure}
+                        \begin{tikzpicture}[scale=0.5]
+                            \draw [blue, thick, ->] (2,0) -- (4,-2) node [right] { \(\vec{F}\) };
+                            \draw [red, thick, ->] (0,0) -- (2,0) node [right] { \(\vec{r}\) };
+                        \end{tikzpicture}
+                        \caption{sentido negativo, entrando da folha de papel}
+                    \end{figure}
+                \end{column}
+
+            \end{columns}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{''Os relógios são negativos...''}
+    \centering
+    \begin{tikzpicture}[scale=5]
+        \draw[red,thick,->] (0,0,0) -- (1,0,0) node[below left]{$x$};
+        \draw[blue, thick,->] (0,0,0) -- (0,1,0) node[below right]{$y$};
+        \draw[black, thick,->] (0,0,0) -- (0,0,1) node[below right]{$z$};
+
+        \only<1>{
+        \draw[green!75!black, thick, ->] (0.5,0.5*tan{15}) arc (15:75:0.5/cos{15});
+        \node [green!75!black, below] at (0.75,0.5) {rotação anti-horária};
+        \draw [green!75!black,thick, ->] (0.3,0,0.25) -- (0.3,0,0.75) node [below] {sentido positivo};
+    }
+    \only<2>{
+        \draw[magenta!75!black, thick, <-] (0.5,0.5*tan{15}) arc (15:75:0.5/cos{15});
+        \node [magenta!75!black, below] at (0.75,0.5) {rotação horária};
+        \draw [magenta!75!black,thick, ->] (0.3,0,0.75) node [below] {sentido negativo}-- (0.3,0,0.25);
+    }
+    \end{tikzpicture}
+\end{frame}
+
+
+\begin{frame}{Exemplo 2}
+
+    \begin{minipage}{\textwidth}
+        Romeu apoia uma escada uniforme de \SI{10}{m} em um muro liso (sem atrito).
+        A massa da escada é \SI{22}{kg} e sua base, no chão, está a \SI{2.8}{m} do muro.
+        Quando Romeu, cuja massa é \SI{70}{kg}, completa \SI{90}{\%} do percurso de subida, a escada começa a escorregar.
+        Qual é o coeficiente de atrito estático entre o chão e a escada?
+    \end{minipage}
+
+    \begin{center}
+        \includegraphics[width=0.3\textwidth]{images/romeu}
+    \end{center}
+
+\end{frame}
+
+\begin{frame}{Exemplo 3}
+    \begin{minipage}{\textwidth}
+        Uma das extremidades de uma barra uniforme de \SI{4.00}{m} de comprimento e peso $F_g$ é sustentada por um cabo a um
+        ângulo $\theta=\SI{37}{\degree}$ com a barra. A outra extremidade está apoiada na parede no ponto $A$, onde é segurada pelo atrito.
+        O coeficiente de atrito estático entre a parede e a barra é $\mu_e=\num{0.500}$.
+        Determine a distância mínima $x$ a partir do ponto $A$ na qual um corpo adicional com o mesmo peso da barra pode ser pendurado sem
+        fazer com que a barra escorregue.
+    \end{minipage}
+
+    \begin{center}
+        \includegraphics[width=0.25\textwidth]{images/pendurado}
+    \end{center}
+\end{frame}
+
+\begin{frame}{Exemplo 4}
+    \begin{minipage}{\textwidth}
+        Um alpinista de \SI{55}{kg} está subindo uma parede usando uma fissura na pedra, com as mãos puxando um
+        lado da fissura e os pés pressionando o lado oposto. A fissura tem uma largura w = \SI{0.20}{m},
+        e o centro de massa do alpinista está a uma distância horizontal d = \SI{0.40}{m} da fissura.
+        O coeficiente de atrito estático entre as mãos e a rocha é \(\mu_1 = \num{0.40}\)
+        e entre as botas e a pedra é \(\mu_2 = \num{1.2}\). (a) Qual é a menor força horizontal das
+        mãos e dos pés que mantém o alpinista estável? (b) Para a força horizontal do item (a),
+        qual deve ser a distância vertical h entre as mãos e os pés? Se o alpinista encontra uma pedra
+        molhada, para a qual os valores de \(\mu_1\) e \(\mu_2\) são menores, (c) o que acontece com a
+        resposta do item (a) e (d) o que acontece com a resposta do item (b)?
+    \end{minipage}
+\end{frame}
+
+\begin{frame}{}
+    \begin{center}
+        \includegraphics[width=0.5\textwidth]{images/Captura de tela de 2022-11-02 18-04-44.png}
+    \end{center}
+\end{frame}
+
+\begin{frame}{Exemplo 5}
+    \begin{minipage}{\textwidth}
+        Um caixote, na forma de um cubo com \SI{1,2}{m} de lado, contém uma peça de máquina; o centro de
+        massa do caixote e do conteúdo está localizado \SI{0,30}{m} acima do centro geométrico do caixote. O caixote
+        repousa em uma rampa que faz um ângulo \(\theta\) com a horizontal. Quando \(\theta\) aumenta a partir de zero, um
+        valor de ângulo é atingido para o qual o caixote tomba ou desliza pela rampa. Se o coeficiente de atrito
+        estático \(\mu_s\) entre a rampa e o caixote é 0,60, (a) a rampa tomba ou desliza? (b) Para que ângulo \(\theta\) isso
+        acontece? Se \(\mu_s\) = 0,70, (c) o caixote tomba ou desliza? (d) Para que ângulo \(\theta\) isso acontece? (Sugestão:
+        Qual é o ponto de aplicação da força normal quando o caixote está prestes a tombar?)
+    \end{minipage}
 \end{frame}
