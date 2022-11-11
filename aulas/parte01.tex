@@ -1,3 +1,5 @@
+\section{Apresentação}
+
 \begin{frame}%{Capa}
     \titlepage
 \end{frame}
@@ -48,6 +50,8 @@
         \includegraphics[width=0.33\textwidth]{images/halliday_10.png}
     \end{center}
 \end{frame}
+
+\section{Equilíbrio estático}
 
 \begin{frame}{Força e torque}
     \begin{itemize}
@@ -220,27 +224,27 @@
     \end{center}
 \end{frame}
 
+% \begin{frame}{Exemplo 4}
+%     \begin{minipage}{\textwidth}
+%         Um alpinista de \SI{55}{kg} está subindo uma parede usando uma fissura na pedra, com as mãos puxando um
+%         lado da fissura e os pés pressionando o lado oposto. A fissura tem uma largura w = \SI{0.20}{m},
+%         e o centro de massa do alpinista está a uma distância horizontal d = \SI{0.40}{m} da fissura.
+%         O coeficiente de atrito estático entre as mãos e a rocha é \(\mu_1 = \num{0.40}\)
+%         e entre as botas e a pedra é \(\mu_2 = \num{1.2}\). (a) Qual é a menor força horizontal das
+%         mãos e dos pés que mantém o alpinista estável? (b) Para a força horizontal do item (a),
+%         qual deve ser a distância vertical h entre as mãos e os pés? Se o alpinista encontra uma pedra
+%         molhada, para a qual os valores de \(\mu_1\) e \(\mu_2\) são menores, (c) o que acontece com a
+%         resposta do item (a) e (d) o que acontece com a resposta do item (b)?
+%     \end{minipage}
+% \end{frame}
+
+% \begin{frame}{}
+%     \begin{center}
+%         \includegraphics[width=0.5\textwidth]{images/Captura de tela de 2022-11-02 18-04-44.png}
+%     \end{center}
+% \end{frame}
+
 \begin{frame}{Exemplo 4}
-    \begin{minipage}{\textwidth}
-        Um alpinista de \SI{55}{kg} está subindo uma parede usando uma fissura na pedra, com as mãos puxando um
-        lado da fissura e os pés pressionando o lado oposto. A fissura tem uma largura w = \SI{0.20}{m},
-        e o centro de massa do alpinista está a uma distância horizontal d = \SI{0.40}{m} da fissura.
-        O coeficiente de atrito estático entre as mãos e a rocha é \(\mu_1 = \num{0.40}\)
-        e entre as botas e a pedra é \(\mu_2 = \num{1.2}\). (a) Qual é a menor força horizontal das
-        mãos e dos pés que mantém o alpinista estável? (b) Para a força horizontal do item (a),
-        qual deve ser a distância vertical h entre as mãos e os pés? Se o alpinista encontra uma pedra
-        molhada, para a qual os valores de \(\mu_1\) e \(\mu_2\) são menores, (c) o que acontece com a
-        resposta do item (a) e (d) o que acontece com a resposta do item (b)?
-    \end{minipage}
-\end{frame}
-
-\begin{frame}{}
-    \begin{center}
-        \includegraphics[width=0.5\textwidth]{images/Captura de tela de 2022-11-02 18-04-44.png}
-    \end{center}
-\end{frame}
-
-\begin{frame}{Exemplo 5}
     \begin{minipage}{\textwidth}
         Um caixote, na forma de um cubo com \SI{1,2}{m} de lado, contém uma peça de máquina; o centro de
         massa do caixote e do conteúdo está localizado \SI{0,30}{m} acima do centro geométrico do caixote. O caixote
@@ -251,3 +255,211 @@
         Qual é o ponto de aplicação da força normal quando o caixote está prestes a tombar?)
     \end{minipage}
 \end{frame}
+
+\begin{frame}{Antes tarde do que nunca...}
+    \begin{itemize}
+        \item Como vimos, no caso em que forças e posições estão no mesmo plano \textit{xy}, o torque
+            está ao longo do eixo \textit{z} e o sentido depende se a rotação que seria provocada é
+            no sentido horário (negativo) ou anti-horário (positivo)
+        \item Além disso, temos que o módulo do torque é dado por \(\tau = r F \sen{\theta}\)
+        \item O detalhe que foi \textit{perdido} é que \textbf{podemos} decompor os vetores \(\vec{r}\) e \(\vec{F}\)
+            em suas componentes \textit{x} e \textit{y} e, com isso, \textit{fugir} do cálculo/descoberta do
+            ângulo \(\theta\)
+        \item Isso é possível porque \(\vec{\tau} = \vec{r} \times \vec{F}\) é uma operação
+            \textit{distributiva}\footnote{Mas tome cuidado: ela não é comutativa!}
+        \item Assim
+            \[
+                \begin{cases}
+                    \vec{r}=\vec{r_x}+\vec{r_y}\\
+                    \vec{F}=\vec{F_x}+\vec{F_y}
+                \end{cases}
+                \implies
+                \tau = r_x  F_y - r_y  F_x
+            \]
+            onde \(r_x\), \(r_y\), \(F_x\) e \(F_y\) são componentes, ou seja, \textbf{podem ser positivas ou negativas}
+
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Torque do exemplo 4}
+    \begin{columns}
+        \begin{column}{0.45\textwidth}
+            \begin{center}
+                \includegraphics[width=\textwidth, trim={0 280pt 0 0}, clip]{images/torque-x.pdf}
+            \end{center}
+        \end{column}
+
+        \begin{column}{0.5\textwidth}
+            \begin{align*}
+                \tau &= r_x  P_y - r_y  P_x \\
+                     &= \left(- \frac{L}{2}\right) \left( -P\cos{\theta}\right)-\left(\frac{L}{2}+h\right)\left(P\sen{\theta}\right) \\
+                     &= 0
+            \end{align*}
+
+            ou seja,
+            \[
+                \tan{\theta} = \frac{\frac{L}{2}}{\frac{L}{2}+h}
+                = \frac{\SI{0,6}{m}}{\SI{0,9}{m}}
+                \implies \theta = \SI{33,7}{\degree}
+            \]
+            de acordo com o que foi obtido na última aula
+        \end{column}
+    \end{columns}
+
+\end{frame}
+
+
+\begin{frame}{Atividade}
+
+    \begin{itemize}
+        \item Essa atividade vale 25\% da \(N_1\)
+        \item É um \textbf{estudo dirigido}, isto é, os alunos podem tirar dúvidas com o professor
+        \item Grupo de até 2 alunos
+        \item Resolva os problemas 11, 17, 31 e 37 do capítulo 12 do livro texto
+        \item Data de entrega: 24/11/2022
+    \end{itemize}
+
+\end{frame}
+
+\section{Fluidos}
+
+\begin{frame}{Fluidos}
+    \begin{itemize}
+        \item Um fluido é uma substância que pode escoar, assumindo a forma do recipiente em que é colocado
+        \item Quando discutimos corpos rígidos, as grandezas físicas que usamos são \textbf{massa} e \textbf{força}
+            \begin{center}
+                \includegraphics[width=0.6\textwidth]{images/balde_furado.jpg}
+            \end{center}
+        \item No caso de fluidos, é mais útil falar em \textbf{massa específica} e \textbf{pressão}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Massa específica}
+    \begin{itemize}
+        \item A massa específica média de um corpo é dada por:
+            \[
+                \bar{\rho} = \frac{\Delta  m}{\Delta V}
+            \]
+
+        \item A massa específica de um ponto qualquer de um corpo é:
+            \[
+                \rho = \frac{dm}{dV}
+            \]
+        \item Para um corpo uniforme $\rho = \bar{\rho}$
+
+        \item A unidade SI para a massa específica é o $\si{kg/m^3}$
+    \end{itemize}
+
+\end{frame}
+
+\begin{frame}{Exemplo}
+    \begin{minipage}{\textwidth}
+        Um peixe se mantém na mesma profundidade na água doce ajustando a quantidade
+        de ar em ossos porosos ou em bolsas de ar para tornar sua massa específica média
+        igual à da água. Suponha que, com as bolsas de ar vazias, um peixe tem uma massa
+        específica de \(\SI{1,08}{g/cm^3}\). Para que fração de seu novo volume o peixe deve inflar
+        as bolsas de ar para tornar sua massa específica igual à da água?
+    \end{minipage}
+
+    \vspace{1cm}
+    \textit{Dados:}
+    \begin{itemize}
+        \item Massa específica da água: \(\SI{1,00}{g/cm^3}\)
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Pressão}
+
+    \begin{itemize}
+        \item A pressão $P$ sobre uma superfície é força por unidade de área:
+            \[
+                P=\frac{F}{A}
+            \]
+            onde $F$ é o módulo da força \textbf{normal à superfície} e $A$ é a área da superfície
+        \item A pressão é uma grandeza \textbf{escalar} de onde podemos obter uma grandeza \textbf{vetorial} (força)
+
+        \item Se a pressão \textbf{varia} sobre uma área, a força infinitesimal $dF$ sobre um elemento de superfície infinitesimal de área $dA$ é:
+            \[
+                dF=P dA
+            \]
+        \item A unidade SI para a pressão é o pascal: $\SI{1}{Pa} = \SI{1}{N/m^2}$
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Outras unidades de pressão}
+    Além do pascal, também são comumente usadas:
+    \begin{fleqn}
+        \begin{gather*}
+            \SI{1}{atm} = \SI{101.325}{kPa} \\
+            \SI{1}{bar} = \SI{100}{kPa} \\
+            \SI{1}{psi} = \SI{1}{lbf/in^2} = \frac{\SI{4.4482}{N}}{(\SI{0.0254}{m})^2} =
+            \SI{6894.7548}{Pa} \\
+            \SI{1}{atm} = \SI{14.7}{psi}
+        \end{gather*}
+    \end{fleqn}
+\end{frame}
+
+\begin{frame}{}
+    \begin{center}
+        \includegraphics[height=8cm]{images/psi.png}
+    \end{center}
+\end{frame}
+
+\begin{frame}{Pressão em Fluidos}
+    \begin{itemize}
+        \item A pressão em um fluido aumenta com a profundidade
+        \item A pressão em um fluido \textbf{incompressível} aumenta \textbf{linearmente} com a profundidade
+            \[
+                P=P_0 + \rho g h
+            \]
+        \item \textbf{Princípio de Pascal}: Variações de pressão aplicadas em um fluido \textbf{incompressível} confinado são transmitidas, sem redução, a todos os pontos do fluido e às paredes do recipiente
+            \[
+                \Delta P_1 = \Delta P_2 = \ldots = \Delta P_n
+            \]
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Exemplo}
+    \begin{minipage}{\textwidth}
+        Três líquidos imiscíveis são despejados em um recipiente cilíndrico. Os volumes e
+        massas específicas são:
+        \begin{enumerate}
+            \item \SI{0,50}{L} e \(\SI{2,6}{g/cm^3}\)
+            \item \SI{0,25}{L} e \(\SI{1,0}{g/cm^3}\)
+            \item \SI{0,40}{L} e \(\SI{0,80}{g/cm^3}\)
+        \end{enumerate}
+        Qual é a força total exercida pelos líquidos sobre o fundo do recipiente? Ignore
+        a contribuição da atmosfera.
+    \end{minipage}
+
+    \vspace{1cm}
+    \textit{Dados:} \SI{1}{L} =  \(\SI{1000}{cm^3}\)
+\end{frame}
+
+\begin{frame}{Exemplo 2}
+    \begin{minipage}{\textwidth}
+        O tubo de plástico da figura abaixo tem uma seção reta de \(\SI{5,00}{cm^2}\).
+        Introduz-se água no tubo até o lado mais curto (de comprimento \(d= \SI{0,800}{m}\) fique
+        cheio. Em seguida, o lado menor é fechado e mais água é despejada no lado maior. Se a tampa do lado menor
+        é arrancada quando a força a que está submetida excede \SI{9,80}{N}, que altura da coluna de água do lado
+        maior deixa a tampa na iminência de ser arrancada?
+    \end{minipage}
+
+    \vspace{1cm}\centering
+    \begin{tikzpicture}[scale=1/3]
+        \draw [thick, fill=cyan!25] (0,10) -- (0,0) -- (10,0) -- (10,8) --  (9,8) -- (9,1) -- (1,1) -- (1,10) -- cycle;
+    \end{tikzpicture}
+\end{frame}
+
+\begin{frame}{Exemplo 3}
+    \begin{minipage}{\textwidth}
+        Seja um tubo em forma de U modificado: o lado direito é mais curto que o lado
+        esquerdo. A extremidade do lado direito está \(d=\SI{10,0}{cm}\) acima da bancada do laboratório.
+        O raio do tubo é \SI{1,50}{cm}. Despeja-se água, lentamente, no lado esquerdo até que comece a
+        transbordar do lado direito. Em seguida, um líquido, de massa específica \(\SI{0,80}{g/cm^3}\), é despejado
+        lentamente no lado esquerdo até que a altura do líquido nesse lado seja de \SI{8,0}{cm} (o líquido não
+        se mistura com a água). Que quantidade de água transborda do lado direito?
+    \end{minipage}
+\end{frame}
+
+
