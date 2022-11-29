@@ -352,7 +352,7 @@
 
 \end{frame}
 
-\begin{frame}{Exemplo}
+\begin{frame}{Problema 14-1}
     \begin{minipage}{\textwidth}
         Um peixe se mantém na mesma profundidade na água doce ajustando a quantidade
         de ar em ossos porosos ou em bolsas de ar para tornar sua massa específica média
@@ -378,7 +378,8 @@
             onde $F$ é o módulo da força \textbf{normal à superfície} e $A$ é a área da superfície
         \item A pressão é uma grandeza \textbf{escalar} de onde podemos obter uma grandeza \textbf{vetorial} (força)
 
-        \item Se a pressão \textbf{varia} sobre uma área, a força infinitesimal $dF$ sobre um elemento de superfície infinitesimal de área $dA$ é:
+        \item Se a pressão \textbf{varia} sobre uma área, a força infinitesimal
+            $dF$ sobre um elemento de superfície infinitesimal de área $dA$ é:
             \[
                 dF=P dA
             \]
@@ -412,14 +413,16 @@
             \[
                 P=P_0 + \rho g h
             \]
-        \item \textbf{Princípio de Pascal}: Variações de pressão aplicadas em um fluido \textbf{incompressível} confinado são transmitidas, sem redução, a todos os pontos do fluido e às paredes do recipiente
+        \item \textbf{Princípio de Pascal}: Variações de pressão aplicadas em
+            um fluido \textbf{incompressível} confinado são transmitidas, sem
+            redução, a todos os pontos do fluido e às paredes do recipiente
             \[
                 \Delta P_1 = \Delta P_2 = \ldots = \Delta P_n
             \]
     \end{itemize}
 \end{frame}
 
-\begin{frame}{Exemplo}
+\begin{frame}{Problema 14-4}
     \begin{minipage}{\textwidth}
         Três líquidos imiscíveis são despejados em um recipiente cilíndrico. Os volumes e
         massas específicas são:
@@ -436,25 +439,30 @@
     \textit{Dados:} \SI{1}{L} =  \(\SI{1000}{cm^3}\)
 \end{frame}
 
-\begin{frame}{Exemplo}
+\begin{frame}{Exemplo 13-3 do Tipler}
     \begin{minipage}{\textwidth}
-        O pistão grande de um elevador hidráulico tem um raio de \SI{20}{cm}. Qual é a força que deve ser aplicada sobre o pistão pequeno, de \SI{2.0}{cm} de raio, para levantar um carro de \SI{1500}{kg} de massa?
+        O pistão grande de um elevador hidráulico tem um raio de \SI{20}{cm}.
+        Qual é a força que deve ser aplicada sobre o pistão pequeno, de
+        \SI{2.0}{cm} de raio, para levantar um carro de \SI{1500}{kg} de massa?
     \end{minipage}
     \begin{center}
         \includegraphics[width=0.45\textwidth]{images/pistao}
     \end{center}
 \end{frame}
 
-\begin{frame}{Exemplo}
+\begin{frame}{Seção 14.3 do Serway}
     \begin{minipage}{\textwidth}
-        A figura seguinte mostra um barômetro de mercúrio, que é usado para medir a pressão atmosférica. Se a massa específica do mercúrio é $\SI{13.6e3}{kg/m^3}$, qual a altura da coluna de mercúrio se a pressão $P_0 = \SI{101.3}{kPa}$?
+        A figura seguinte mostra um barômetro de mercúrio, que é usado para
+        medir a pressão atmosférica. Se a massa específica do mercúrio é
+        $\SI{13.6e3}{kg/m^3}$, qual a altura da coluna de mercúrio se a pressão
+        $P_0 = \SI{101.3}{kPa}$?
     \end{minipage}
     \begin{center}
         \includegraphics[width=0.2\textwidth]{images/barometro}
     \end{center}
 \end{frame}
 
-\begin{frame}{Exemplo}
+\begin{frame}{Problema 14-10}
     \begin{minipage}{\textwidth}
         O tubo de plástico da figura abaixo tem uma seção reta de \(\SI{5,00}{cm^2}\).
         Introduz-se água no tubo até o lado mais curto (de comprimento \(d= \SI{0,800}{m}\) fique
@@ -469,7 +477,7 @@
     \end{tikzpicture}
 \end{frame}
 
-\begin{frame}{Exemplo}
+\begin{frame}{Problema 14-81}
     \begin{minipage}{\textwidth}
         Seja um tubo em forma de U modificado: o lado direito é mais curto que o lado
         esquerdo. A extremidade do lado direito está \(d=\SI{10,0}{cm}\) acima da bancada do laboratório.
@@ -480,11 +488,180 @@
     \end{minipage}
 \end{frame}
 
-\begin{frame}{Exemplo}
+\begin{frame}{Exemplo 13-2 do Tipler}
     \begin{minipage}{\textwidth}
-        Uma represa retangular de \SI{30}{m} de largura suporta uma quantidade de água de \SI{25}{m} de profundidade. Determine a força horizontal total sobre a represa, exercida pela água e pela pressão atmosférica $P_0 = \SI{101.3}{kPa}$.
+        Uma represa retangular de \SI{30}{m} de largura suporta uma quantidade
+        de água de \SI{25}{m} de profundidade. Determine a força horizontal
+        total sobre a represa, exercida pela água e pela pressão atmosférica
+        $P_0 = \SI{101.3}{kPa}$.
     \end{minipage}
     \begin{center}
         \includegraphics[width=0.45\textwidth]{images/represa}
     \end{center}
+\end{frame}
+
+\begin{frame}{Princípio de Arquimedes}
+    Um corpo total ou parcialmente mergulhado em um fluido sofre uma \textbf{força
+    de empuxo} vertical de baixo para cima igual ao peso do fluido por ele
+    deslocado:
+    \[E=\rho g V_{sub}\]
+
+    \begin{center}
+        \includegraphics[height=0.4\textheight]{images/empuxo1}
+        \hspace*{1cm}
+        \includegraphics[height=0.4\textheight]{images/empuxo2}
+    \end{center}
+
+    O peso aparente $F_{ap}$ de um corpo imerso em um fluido é a diferença entre os
+    módulos do seu peso $F_{g}$ e do empuxo $E$: \[F_{ap}=F_{g}-E\]
+\end{frame}
+
+\begin{frame}{Exemplo 1}
+Diz a lenda que pediram a Arquimedes para determinar se uma coroa feita para o
+rei consistia de ouro puro. Ele resolveu este problema pesando a coroa,
+primeiro, no ar, e depois na água. Suponha que a balança tenha marcado
+\SI{7.84}{N} quando a coroa estava no ar e \SI{6.84}{N} quando na água. Qual a
+conclusão de Arquimedes, sabendo que a massa específica do ouro é
+$\SI{19.3}{g/cm^3}?$
+\end{frame}
+
+\begin{frame}{Exemplo 2}
+Um iceberg flutuando na água do mar é extremamente perigoso porque a maior
+parte do gelo está abaixo da superfície. Que fração do volume de um iceberg
+está abaixo do nível da água?
+
+Dados:
+\begin{itemize}
+\item massa específica da água do mar: $\SI{1030}{kg/m^3}$
+\item massa específica do gelo: $\SI{917}{kg/m^3}$
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Exemplo 3}
+A porcentagem de gordura de seu corpo pode ser estimada medindo-se a massa
+específica média do seu corpo. A gordura é menos densa do que os músculos e
+ossos. Suponha que a massa específica da gordura seja $\SI{0.90e3}{kg/m^3}$ e
+que a massa específica do tecido magro (tudo, menos a gordura) seja
+$\SI{1.1e3}{kg/m^3}$. Suponha que seu peso aparente, quando imerso em água,
+seja \SI{5}{\%} de seu peso. Que percentual de sua massa é de gordura?
+\end{frame}
+
+\begin{frame}{Fluidos em movimento}
+Até agora nosso estudo foi restrito a fluidos em repouso. Quando um fluido está
+em movimento, o fluxo pode ser caracterizado como sendo:
+\begin{itemize}
+\item regular ou laminar: cada partícula do fluido segue uma trajetória reta de
+    forma que as trajetórias de diferentes partículas nunca se cruzem.
+\item turbulento: as trajetórias das partículas formam redemoinhos em algumas
+    regiões.
+\end{itemize}
+
+Quando a velocidade de escoamento de um fluido se torna suficientemente grande,
+o escoamento deixa de ser laminar e se torna turbulento.
+
+\end{frame}
+
+\begin{frame}{Vazão}
+    \begin{itemize}
+        \item Na figura, o fluido escoa da esquerda para direita sem turbulência
+        \item A massa $\Delta m_1$ que escoa através da superfície 1 é dada por:
+    \end{itemize}
+\[
+\Delta m_1 = \rho_1 \Delta V_1 = \rho_1 A_1 \Delta x_1 = \rho_1 A_1 v_1 \Delta t
+\]
+\begin{center}
+\includegraphics[width=0.45\textwidth]{images/tuboS}
+\end{center}
+\end{frame}
+
+\begin{frame}
+    \begin{itemize}
+        \item A quantidade $I_M=\rho A v$ é chamada de \textbf{vazão mássica}
+        \item As dimensões de $I_M$ são as de massa dividida por tempo
+        \item A massa que atravessa a superfície 2 durante o mesmo tempo $\Delta t$ é:
+    \end{itemize}
+\[
+\Delta m_2 = \rho_2 A_2 v_2 \Delta t
+\]
+\begin{center}
+\includegraphics[width=0.45\textwidth]{images/tuboS}
+\end{center}
+\end{frame}
+
+\begin{frame}[c]
+A diferença entre a taxa na qual massa entra no tubo e a taxa na qual a massa
+sai do tubo é igual a taxa de variação da massa do tubo:
+\[
+\frac{\Delta m_1}{\Delta t} - \frac{\Delta m_2}{\Delta t} = \frac{dm}{dt} ~\rightarrow~ I_{M1}-I_{M2} = \frac{dm}{dt}
+\]
+essa equação é chamada de \textbf{equação da continuidade}.
+\end{frame}
+
+\begin{frame}
+Escoamento no qual o movimento do fluido é constante (não varia com o tempo) em
+todos os pontos é chamado \textbf{estacionário}. Em um escoamento estacionário
+a vazão mássica em um dado instante é a mesma através de todas as superfícies
+de seção reta.Além disso, a vazão mássica é constante.
+
+\[
+\frac{dm}{dt}=0 ~\rightarrow~ I_{M1}=I_{M2}
+\]
+
+A quantidade $I_V = Av$ é chamada de \textbf{vazão volumétrica}. Para um fluido incompressível, temos:
+\[
+I_{V1}=I_{V2}
+\]
+\end{frame}
+
+\begin{frame}{Exemplo}
+A figura abaixo mostra dois segmentos de uma antiga tubulação que atravessa uma
+colina: as dimensões são \(d_A = \SI{30}{m}\), \(d_B=\SI{35}{m}\) e
+\(D=\SI{115}{m}\). O raio do cano do lado de fora da colina é \SI{2.00}{cm}; o
+raio do cano no interior da colina, porém, não é mais conhecido. Para
+determiná-lo, os engenheiros hidráulicos verificaram inicialmente que a
+velocidade da água nos segmentos à esquerda e à direita da colina era
+\SI{2.50}{m/s}. Em seguida, introduziram um corante na água no ponto \(A\) e
+observaram que levava \SI{100}{s} para chegar ao ponto \(B\). Qual é o raio
+médio do cano no interior da colina?
+
+\begin{center}
+\includegraphics[width=0.4\textwidth]{images/colina}
+\end{center}
+
+\end{frame}
+
+\begin{frame}{Equação de Bernoulli}
+A equação de Bernoulli relaciona a pressão, a altura e a velocidade (módulo) de
+um fluido \textbf{incompressível não-viscoso em escoamento estacionário}:
+\[
+P_2+\rho g h_2 + \frac{1}{2}\rho v^2_2 = P_1+\rho g h_1 + \frac{1}{2}\rho v^2_1
+\]
+
+A equação de Bernoulli pode ser enunciada, também, como
+\[
+P+\rho g h + \frac{1}{2}\rho v^2 = \mathrm{constante}
+\]
+
+Para um fluido em repouso, temos:
+\[
+P+\rho g h = \mathrm{constante}
+\]
+\end{frame}
+
+\begin{frame}{Exemplo - Lei de Torricelli}
+Um grande tanque de água, aberto em cima, possui um pequeno furo lateral a uma
+distância $\Delta h$ abaixo da superfície da água. Determine a velocidade com
+que a água sai do furo.
+\end{frame}
+
+\begin{frame}{Medidor Venturi}
+
+Um \textit{medidor Venturi} é mostrado na figura abaixo. Expresse a velocidade
+\(v_1\) em termos da altura medida \(\Delta h\) e das grandezas conhecidas
+\(\rho_F\), \(\rho_L\) e \(r=A_1/A_2\)
+
+\begin{center}
+\includegraphics[width=0.5\textwidth]{images/venturi}
+\end{center}
 \end{frame}
