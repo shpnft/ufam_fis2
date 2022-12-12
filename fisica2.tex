@@ -1,0 +1,70 @@
+\documentclass[t,% Place text of slides at the (vertical) top of the slides
+brazilian,% Brazilian Portuguese, FTW!
+11pt,% Standard font size
+aspectratio=169% Aspect ratio 16:9 (widescreen)
+]{beamer}
+
+\usetheme{Boadilla}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{frametitle continuation}{}
+\setbeamertemplate{page number in head/foot}[framenumber]
+\setbeamertemplate{enumerate items}[default]
+\setbeamertemplate{itemize items}[circle]
+\setbeamercovered{transparent}
+
+\usepackage{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+\usepackage{graphicx}
+\usepackage{tikz}
+
+\usepackage{amssymb,amsfonts,amsmath}
+\usepackage{mathtools}
+
+\usepackage{siunitx}
+
+\usetikzlibrary{calc}
+\usetikzlibrary{intersections}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{patterns}
+
+\setkeys{Gin}{keepaspectratio}
+\sisetup{locale = FR}
+
+\DeclareMathOperator{\sen}{sen}
+\renewcommand{\vec}[1]{\overrightarrow{#1}}
+
+%--------------------------------------------------
+
+\def\Disciplina{Geometria Analítica}
+\def\Professor{Rodrigo de Farias Gomes}
+\def\Periodo{Período 2022.1}
+
+\title{\Disciplina}
+\author{\Professor}
+\date{\Periodo}
+
+\def\Disciplina{Física Geral 2}
+\def\Professor{Rodrigo de Farias Gomes}
+\def\Periodo{Período 2022.1}
+
+\title{\Disciplina}
+\author{\Professor}
+\date{\Periodo}
+
+\setbeamertemplate{caption}{\raggedright\insertcaption\par}
+
+\usepackage{tcolorbox}
+\tcbset{boxrule=0pt, top=0pt, bottom=0pt}
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+
+\begin{document}
+
+\include{include/parte01}
+\include{include/parte02}
+
+\end{document}

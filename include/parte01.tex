@@ -152,7 +152,7 @@
             \begin{columns}
                 \begin{column}{0.4\textwidth}
                     \begin{figure}
-                        \begin{tikzpicture}[scale=0.5]
+                        \begin{tikzpicture}[scale=0.45]
                             \draw [blue, thick, ->] (2,0) -- (4,2) node [right] { \(\vec{F}\) };
                             \draw [red, thick, ->] (0,0) -- (2,0) node [right] { \(\vec{r}\) };
                         \end{tikzpicture}
@@ -162,7 +162,7 @@
 
                 \begin{column}{0.4\textwidth}
                     \begin{figure}
-                        \begin{tikzpicture}[scale=0.5]
+                        \begin{tikzpicture}[scale=0.45]
                             \draw [blue, thick, ->] (2,0) -- (4,-2) node [right] { \(\vec{F}\) };
                             \draw [red, thick, ->] (0,0) -- (2,0) node [right] { \(\vec{r}\) };
                         \end{tikzpicture}
@@ -389,15 +389,12 @@
 
 \begin{frame}{Outras unidades de pressão}
     Além do pascal, também são comumente usadas:
-    \begin{fleqn}
-        \begin{gather*}
-            \SI{1}{atm} = \SI{101.325}{kPa} \\
-            \SI{1}{bar} = \SI{100}{kPa} \\
-            \SI{1}{psi} = \SI{1}{lbf/in^2} = \frac{\SI{4.4482}{N}}{(\SI{0.0254}{m})^2} =
-            \SI{6894.7548}{Pa} \\
-            \SI{1}{atm} = \SI{14.7}{psi}
-        \end{gather*}
-    \end{fleqn}
+    \begin{itemize}
+        \item \SI{1}{atm} = \SI{101.325}{kPa}
+        \item \SI{1}{bar} = \SI{100}{kPa}\
+        \item \SI{1}{psi} = \(\SI{1}{lbf/in^2}\) = \(\displaystyle \frac{\SI{4.4482}{N}}{(\SI{0.0254}{m})^2}\) = \SI{6894.7548}{Pa}
+        \item \SI{1}{atm} = \SI{14.7}{psi}
+    \end{itemize}
 \end{frame}
 
 \begin{frame}{}
