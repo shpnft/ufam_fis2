@@ -44,11 +44,11 @@
 
 \begin{frame}{Equação diferencial}
     \[
-        F=-kx \implies ma=-kx \implies m\frac{d x}{dt}=-kx \implies \frac{d x}{dt}=-\frac{k}{m} x
+        F=-kx \implies ma=-kx \implies m\frac{d^2 x}{dt^2}=-kx \implies \frac{d^2 x}{dt^2}=-\frac{k}{m} x
     \]
     \begin{gather*}
     \Downarrow \\
-    \boxed{\color{blue} \frac{du}{dt}= -\omega^2 u \implies \text{Movimento Harmônico Simples}}
+    \boxed{\color{blue} \frac{d^2 u}{dt^2}= -\omega^2 u \implies \text{Movimento Harmônico Simples}}
     \end{gather*}
     Solução geral:
     \[
@@ -90,15 +90,18 @@
             \begin{itemize}
                 \item \(A\) é a amplitude
                 \item \(T\) é o período e \(T=2\pi/\omega\)
-                \item \(\omega\) é a frequência angular
                 \item \(\omega t + \delta\) é a fase
                 \item \(\delta\) é a constante de fase
+                \item \(\omega\) é a frequência angular
                 \item \(f\) é a frequência e \(\omega = 2\pi f\)
                     \[
                         \color{blue}
                         T=\frac{1}{f}
                     \]
             \end{itemize}
+            \begin{tcolorbox}[colback=blue!10]
+                No SI, T é em \si{s}, \(\omega\) é em \si{rad/s} e f é em \si{Hz} (ciclo/s)
+            \end{tcolorbox}
         \end{column}
     \end{columns}
 \end{frame}
@@ -200,10 +203,27 @@
     \end{columns}
 \end{frame}
 
-\begin{frame}{Exemplos}
+\begin{frame}{Capítulo 15: Problema 1 modificado}
+    \begin{minipage}{\textwidth}
+        Um objeto que executa um movimento harmônico simples leva \SI{0.25}{s} para se deslocar de um ponto de
+        velocidade nula para o ponto seguinte \textit{com velocidade nula}. A distância entre os pontos é \SI{36}{cm}. Calcule (a) o
+        período, (b) a frequência e (c) a amplitude do movimento
+    \end{minipage}
+    \pause
     \begin{itemize}
-        \item Problemas 1 e 3
-        \item Problemas 8, 12 e 16
+    \color{blue}
+        \item \(x=A\cos{\omega t} \implies v=-\omega A \sen{\omega t} \)
+        \item \(v=0 \implies \omega t = 0 \text{ ou } \omega t = \pi \implies t = \pi /\omega\)
+        \item \(T=2\pi / \omega \text{ e } \SI{0.25}{s} = \pi / \omega \implies T=2 \times \SI{0.25}{s} = \SI{0.50}{s}\)
+        \item \(f=1/T \implies f=1/\SI{0.5}{s} = \SI{2}{s^{-1}} = \SI{2}{Hz}\)
+        \item \(\omega t = 0 \text{ ou } \omega t = \pi \implies x_i=A \text{ e } x_f=A \implies \Delta x = 2A 
+            \implies 2A= \SI{36}{cm} \implies {A=\SI{18}{cm}}\)
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Capítulo 15: mais problemas}
+    \begin{itemize}
+        \item Problemas 7, 8, 12, 15 e 16
     \end{itemize}
 \end{frame}
 
@@ -255,5 +275,18 @@
     \begin{itemize}
         \item Problemas 55 e 56
     \end{itemize}
-    
+\end{frame}
+
+\begin{frame}{Atividade - Ondas sonoras}
+    \begin{itemize}
+        \item Vale 25\% da \(N_2\)
+        \item Grupo de no máximo 2 alunos
+        \item Faça uma pesquisa sobre Ondas Sonoras contendo:
+            \begin{itemize}
+                \item Relação entre velocidade do som e massa específica/elasticidade do meio de propagação
+                \item Nível sonoro em decibéis
+                \item O aparelho auditivo humano
+            \end{itemize}
+        \item Data de entrega 15/1
+    \end{itemize}
 \end{frame}
