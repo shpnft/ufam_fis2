@@ -1,0 +1,104 @@
+\documentclass[12pt,a4paper,brazilian, fleqn]{article}
+
+\usepackage{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+\usepackage{amssymb,amsfonts,amsmath}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,intersections}
+
+\usepackage{tcolorbox}
+\tcbset{boxrule=0pt, top=0pt, bottom=0pt}
+
+\DeclareMathOperator{\sen}{sen}
+
+%https://tex.stackexchange.com/a/100406
+%29.7 cm - 1cm - 1cm - 144.90/28.4 cm = 22.60 cm
+\usepackage[a4paper, totalheight=22.60cm,includeheadfoot,left=1.5cm, right=1.0cm, top=1cm]{geometry}
+\setlength{\headheight}{144.90pt}
+
+\setkeys{Gin}{keepaspectratio}
+
+\newcommand{\cabeca}{
+    \begin{tikzpicture}
+        \node(Logo) {\includegraphics[width=2.5cm]{logo.png}};
+        % \node(Logo) {\includegraphics[width=4.1cm]{logo.png}};
+
+        \node(Local) at (Logo.north east) [anchor=north west, yshift=-0.25cm,
+            align=center, execute at begin node=\setlength{\baselineskip}{3ex}]
+            {
+                \huge{\textbf{Universidade Federal do Amazonas}} \\
+                \large{\textbf{Instituto de Ciências Exatas e Tecnologia}} \\
+                \large{\textbf{\Description}}
+            };
+
+        \node(Ident) at (Local.south west) [anchor=north west, yshift=-0.25cm,
+            align=left, execute at begin node=\setlength{\baselineskip}{2em}]
+            {
+                Professor: {\fontfamily{augie}\selectfont \Professor} \\
+                Aluno:
+            };
+        % \draw [thick] (Logo.south west) -- ($(Logo.south west -| Local.south east)$);
+        % \draw [red] (Logo.north west) rectangle (Logo.south east);
+        % \draw [blue] (Local.north west) rectangle (Local.south east);
+        % \draw [green] (Ident.north west) rectangle (Ident.south east);
+    \end{tikzpicture}
+}
+
+\usepackage{fancyhdr}
+\fancyhead{}
+\fancyfoot{}
+\fancyhead[c]{\cabeca}
+\fancyfoot[r]{\fontfamily{augie}\selectfont Boa sorte!}
+
+
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\newcommand{\ratio}[1]{(#1\% da nota)}
+%-----------------------------------CUT HERE-----------------------------------
+
+\def\Description{Física Geral II -- Prova 1 26/01/2023}
+\def\Professor{Rodrigo de Farias Gomes}
+
+\renewcommand{\vec}[1]{\overrightarrow{#1}}
+
+\usepackage{siunitx}
+\sisetup{locale = FR}
+
+\begin{document}
+
+\begin{tcolorbox}[colback=black!10, colframe=black!50, title=Observações]
+    \begin{itemize}
+        \item Todas as páginas com resposta devem ter o nome e matrícula do aluno
+            escritos com caneta no início (cabeçalho) ou no final (rodapé). Páginas
+            que não obedeçam a esse critério não serão usadas na avaliação
+        \item As respostas podem ser escritas com lápis desde que legível
+    \end{itemize}
+\end{tcolorbox}
+
+\begin{enumerate}
+    \item \ratio{25} Um líquido, de massa específica \(\SI{900}{kg/m^3}\),
+        escoa em um tubo horizontal com uma seção reta de \(\SI{1.90e-2}{m^2}\)
+        na região \(A\) e uma seção reta de \(\SI{9.50e-2}{m^2}\) na região \(B\).
+        A diferença de pressão entre as duas regiões é \SI{7.20e3}{Pa}.
+        (a) Qual é a vazão e (b) qual é a vazão mássica?
+
+    \item \ratio{25} Seja um tubo em forma de U modificado: o lado direito é mais curto que o lado
+        esquerdo. A extremidade do lado direito está \(d=\SI{10,0}{cm}\) acima da bancada do laboratório.
+        O raio do tubo é \SI{1,50}{cm}. Despeja-se água, lentamente, no lado esquerdo até que comece a
+        transbordar do lado direito. Em seguida, um líquido, de massa específica \(\SI{0,80}{g/cm^3}\), é despejado
+        lentamente no lado esquerdo até que a altura do líquido nesse lado seja de \SI{8,0}{cm} (o líquido não
+        se mistura com a água). Que quantidade de água transborda do lado direito?
+
+    \item \ratio{50} Um tanque cilíndrico de grande diâmetro está cheio d'água até uma profundidade
+        \(D=\SI{0.50}{m}\). Um furo de seção reta \(A=\SI{6.5}{cm^2}\) no fundo do tanque permite 
+        a drenagem de água. (a) Qual á a velocidade de escoamento da água, em metros cúbicos por segundo?
+        (b) A que distância abaixo do fundo do tanque a seção reta do jorro é igual a um terço da área do furo?
+\end{enumerate}
+
+\end{document}

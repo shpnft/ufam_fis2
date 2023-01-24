@@ -31,7 +31,7 @@
     \end{center}
 
     \[
-        F = -kx \rightarrow 
+        F = -kx \rightarrow
         \begin{cases}
             F = 0, \text{ se } x =0\\
             F > 0, \text{ se } x<0\\
@@ -52,7 +52,7 @@
     \end{gather*}
     Solução geral:
     \[
-        u=C_1 \sen{\omega t} + C_2 \cos{\omega t} \implies 
+        u=C_1 \sen{\omega t} + C_2 \cos{\omega t} \implies
         \begin{cases}
             A \sin{(\omega t + \delta)} \\
             A \cos{(\omega t + \delta)}
@@ -216,14 +216,14 @@
         \item \(v=0 \implies \omega t = 0 \text{ ou } \omega t = \pi \implies t = \pi /\omega\)
         \item \(T=2\pi / \omega \text{ e } \SI{0.25}{s} = \pi / \omega \implies T=2 \times \SI{0.25}{s} = \SI{0.50}{s}\)
         \item \(f=1/T \implies f=1/\SI{0.5}{s} = \SI{2}{s^{-1}} = \SI{2}{Hz}\)
-        \item \(\omega t = 0 \text{ ou } \omega t = \pi \implies x_i=A \text{ e } x_f=A \implies \Delta x = 2A 
+        \item \(\omega t = 0 \text{ ou } \omega t = \pi \implies x_i=A \text{ e } x_f=A \implies \Delta x = 2A
             \implies 2A= \SI{36}{cm} \implies {A=\SI{18}{cm}}\)
     \end{itemize}
 \end{frame}
 
 \begin{frame}{Capítulo 15: mais problemas}
     \begin{itemize}
-        \item Problemas 7, 8, 12, 15 e 16
+        \item Problemas 7, 8, 12 e 15
     \end{itemize}
 \end{frame}
 
@@ -252,7 +252,7 @@
                     \[
                         \frac{d^2\theta}{dt^2} = - \frac{Lmg}{I}\theta
                     \]
-                \item Ou seja 
+                \item Ou seja
                     \begin{itemize}
                         \item para \(\theta\) grande não temos um MHS
                         \item para \(\theta\) pequeno temos um MHS
@@ -271,10 +271,43 @@
     \]
 \end{frame}
 
-\begin{frame}{Casos especiais}
+\begin{frame}{Exemplos}
     \begin{itemize}
-        \item Problemas 55 e 56
+        \item Problemas 33, 42 e 45
     \end{itemize}
+\end{frame}
+
+\begin{frame}{Problema 49}
+    \begin{minipage}{\textwidth}
+        O ângulo do pêndulo da figura abaixo é dado por
+        \(\theta = \theta \cos{[(\SI{4.44}{rad/s})t+\phi]}\). Se, em \(t=0\), \(\theta=\SI{0.040}{rad}\)
+        e \(d\theta/dt = \SI{-0.200}{rad/s}\), qual é (a) a constante de fase \(\phi\) e (b) qual é
+        o ângulo máximo \(\theta_m\)?
+    \end{minipage}
+    \begin{center}
+        \begin{tikzpicture}[scale=1/2,
+            ground/.style={fill,pattern=north east lines,draw=none,minimum width=0.3,minimum height=0.6}
+            ]
+            \draw [ground] (0,0) rectangle (10,1);
+            \draw [thick] (0,0) -- (10,0);
+            \draw [dotted,thick] (5,0) -- (5,-8);
+            \draw [thick] (5,0) -- ++(-60:8) node [midway, above right] {L} node [circle, fill=blue!10, draw=black] {m} coordinate (A);
+            % \draw [red,->] (A) ++(0,-0.5) -- ++(0,-1) node [below] {mg} ;
+            \draw (5,-2) arc (270:300:2) node [midway, below] {$\theta$};
+        \end{tikzpicture}
+    \end{center}
+\end{frame}
+
+\begin{frame}{Problema 82 modificado}
+    \begin{minipage}{\textwidth}
+        Um pêndulo simples, com \SI{20}{cm} de comprimento e \SI{5.0}{g} de massa, está suspenso
+        em um carro de corrida que se move a uma velocidade constante de \SI{70}{m/s}, descrevendo
+        uma circunferência com \SI{50}{m} de raio. Se o pêndulo sofre pequenas oscilações na direção
+        radial em torno da posição de equilíbrio, qual é a frequência das oscilações?
+
+        \vspace{2cm}
+        Compare o valor obtido com o esperado caso o carro estivesse parado.
+    \end{minipage}
 \end{frame}
 
 \begin{frame}{Atividade - Ondas sonoras}
