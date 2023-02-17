@@ -1,0 +1,123 @@
+\documentclass[12pt,a4paper,brazilian, fleqn]{article}
+
+\usepackage{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+\usepackage{amssymb,amsfonts,amsmath}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,intersections}
+
+\usepackage{tcolorbox}
+\tcbset{boxrule=0pt, top=0pt, bottom=0pt}
+
+\DeclareMathOperator{\sen}{sen}
+
+%https://tex.stackexchange.com/a/100406
+%29.7 cm - 1cm - 1cm - 144.90/28.4 cm = 22.60 cm
+\usepackage[a4paper, totalheight=22.60cm,includeheadfoot,left=1.5cm, right=1.0cm, top=1cm]{geometry}
+\setlength{\headheight}{144.90pt}
+
+\setkeys{Gin}{keepaspectratio}
+
+\newcommand{\cabeca}{
+    \begin{tikzpicture}
+        \node(Logo) {\includegraphics[width=2.5cm]{logo.png}};
+        % \node(Logo) {\includegraphics[width=4.1cm]{logo.png}};
+
+        \node(Local) at (Logo.north east) [anchor=north west, yshift=-0.25cm,
+            align=center, execute at begin node=\setlength{\baselineskip}{3ex}]
+            {
+                \huge{\textbf{Universidade Federal do Amazonas}} \\
+                \large{\textbf{Instituto de Ciências Exatas e Tecnologia}} \\
+                \large{\textbf{\Description}}
+            };
+
+        \node(Ident) at (Local.south west) [anchor=north west, yshift=-0.25cm,
+            align=left, execute at begin node=\setlength{\baselineskip}{2em}]
+            {
+                Professor: {\fontfamily{augie}\selectfont \Professor} \\
+                Aluno:
+            };
+        % \draw [thick] (Logo.south west) -- ($(Logo.south west -| Local.south east)$);
+        % \draw [red] (Logo.north west) rectangle (Logo.south east);
+        % \draw [blue] (Local.north west) rectangle (Local.south east);
+        % \draw [green] (Ident.north west) rectangle (Ident.south east);
+    \end{tikzpicture}
+}
+
+\usepackage{fancyhdr}
+\fancyhead{}
+\fancyfoot{}
+\fancyhead[c]{\cabeca}
+\fancyfoot[r]{\fontfamily{augie}\selectfont Boa sorte!}
+
+
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\newcommand{\ratio}[1]{(#1\% da nota)}
+%-----------------------------------CUT HERE-----------------------------------
+
+\def\Description{Física Geral II -- Prova Final}
+\def\Professor{Rodrigo de Farias Gomes}
+
+\renewcommand{\vec}[1]{\overrightarrow{#1}}
+
+\usepackage{siunitx}
+\sisetup{locale = FR}
+
+\begin{document}
+
+\begin{tcolorbox}[colback=black!10, colframe=black!50, title=Observações]
+    \begin{itemize}
+        \item Todas as páginas com resposta devem ter o nome e matrícula do aluno
+            escritos com caneta no início (cabeçalho) ou no final (rodapé). Páginas
+            que não obedeçam a esse critério não serão usadas na avaliação
+        \item As respostas devem ser escritas com caneta
+    \end{itemize}
+\end{tcolorbox}
+
+\begin{enumerate}
+    \item \ratio{33} Um pulso isolado, cuja forma de onda é dada por \(h(x + 5t)\), com \(x\) em centímetros e 
+        \(t\) em segundos, é mostrado na figura abaixo para \(t = 0\). A escala do eixo vertical é definida 
+        por \(h_s = 2\). (a) Qual é a velocidade e (b) qual o sentido de propagação do pulso? 
+        (c) \textit{Esboce} \(h(x + 5t)\) em função de \(x\) para \(t = \SI{2}{s}\). (d) \textit{Esboce} \(h(x + 5t)\)
+        em função de \(t\) para \(x = \SI{3}{cm}\).
+
+        \begin{center}
+        \begin{tikzpicture}[scale=2]
+            \draw [thick] (0,0) -- (5,0);
+            \draw [thick] (0,0) -- (0,2) node [midway, sloped, yshift=2em] {\(h(x)\)};
+            \node [below left] at (0,0) {0};
+            \node [left] at (0,2) {\(h_s\)};
+            \foreach \x in {1,2,3,4,5} {
+                \node [below] at (\x,0) {\x};
+                \draw [black!40] (\x,0) |- (0,1);
+                \draw [black!40] (\x,0) |- (0,2);
+            }
+            \draw [dashed,line width=2pt] (3,0) |- (0,2);
+            \draw [line width=3pt] (0,0) -- (1,0) -- (3,2) -- (4,0) -- (5,0);
+            \path (2,0) -- (3,0) node [midway, below, yshift=-1em] {\(x\)};
+            \node [above right] at (4,1) {\(t=0\)};
+        \end{tikzpicture}
+        \end{center}
+
+    \item \ratio{33} A equação de uma onda transversal que se propaga em uma corda muito longa é 
+        \(y = \num{6.0} \sen{(\num{0.020}\pi x + \num{4.0}\pi t)}\), em que \(x\) e
+        \(y\) estão em centímetros e \(t\) em segundos. Determine (a) a amplitude,
+        (b) o comprimento de onda, (c) a frequência, (d) a velocidade, (e) o 
+        sentido de propagação da onda e (f) a máxima velocidade transversal de uma 
+        partícula da corda. (g) Qual é o deslocamento transversal em 
+        \( x = \SI{3.5}{cm}\) para \(t = \SI{0,26}{s}\)?
+
+    \item \ratio{34} Um pêndulo simples, com \SI{20}{cm} de comprimento e \SI{5.0}{g} de massa, está suspenso
+        em um carro de corrida que se move a uma velocidade constante de \SI{70}{m/s}, descrevendo
+        uma circunferência com \SI{50}{m} de raio. Se o pêndulo sofre pequenas oscilações na direção
+        radial em torno da posição de equilíbrio, qual é a frequência das oscilações?
+\end{enumerate}
+
+\end{document}
